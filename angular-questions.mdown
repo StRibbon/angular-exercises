@@ -1,0 +1,79 @@
+# 1-intro-and-setup
+
+### 1. Why learn Angular JS over other frameworks?
+Angular is backed by Google, the chances of it disappearing are much less than any other framework. Also, it will be maintained better than most frameworks because of the size and power of Google. They are creating this framework for their own apps, so it must be the best option possible. Angular helps rapidly prototype SPA once the steep learning curve has been overcome. Angular has the largest community of any client-side framework as well. Chances are there is an answer to your question. Angular is designed with testing in mind, so it is easy to perform unit testing.
+### 2. Pain-points of Angular JS?
+Angular blurs the line between front-end and back-end. Client-side rendering is not not preferred for static content. Search engines won't discover content if it needs to be processed by the client. Scoping issues that result from complex data binding can slow down your app. It is extremely difficult to learn and has a complex directives api. Performing complicated logic in the view and make it harder to test in isolation.
+### 3. Is Angular an MVC framework?
+Yes. 
+Model: is the data that comes from the REST API. If JSON, than they are JS bojects.
+View: HTML and the directives you need to manipulate the DOM.
+Controller: services you factored out of your server-side controllers. Queries the REST API and manipulates the view. Provides callbacks for directives to respond to events that might then require callbacks to the server. Provides client-side validations.
+### 4. Why is jQuery sort of a dependency of Angular?
+Many aspects such as the ngGrid use jqLite which comes standard with Angular. But later on in development, you may need to write directives which require jQuery. A common usage is for animations when CSS transitions are simply not enough.
+
+# 2-data-binding
+
+### 5. What does the ng-model do?
+It binds an html element to a property. It an also provide validation behavior.
+### 6. What is dirty checking?
+The digest cycle loops through checking all the variables for changes and updating them, but this might not be desirable to have these changes updated, therefore it is dirty because it is uncustomized to your needs.
+### 7. What are the curly braces? Are they Handlebars?
+They complile a string with mark-up into an interpolation function. This is a way of binding expressions to elements which is built-in Angular. They are very similar to handlebars, Angular's own version.
+### 8. Explain what 2 way data binding is?
+Data-binding is the automatic synchronization of data between the model and the view components. Angular treats the model as the singular source of truth in your application. The view is the projection of the model at all times. The view reflects the change in the model and vice versa. The controller stays separated from the view, making it easy to test without the releated DOM/browser dependency.
+
+# 3-expressions-and-filters
+
+### 1. What are angular expressions? How do they compare?
+Angular expressions are evaluated against a scope object. Expressions are forgiving to undefined and null. You cannot use conditionals, loops or exceptions. You can not declare functions. You cannot create regular expressions in an Angular expression. You cannot use commas or void. You can use filters.
+### 2. What happens if you write invalid code in an expression? What type of error do you get?
+You do not get any error and nothing happens.
+### 3. What are Angular filters? Name 4.
+1. filter: selects subset of items from array and returns it as a new array.
+2. number: formats a number as text.
+json: allows you to convert a javascript object into a JSON string.
+3. orderBy: orders a specific array by the expression predicate. It is ordered alphabetically for strings and numerically for numbers.
+4. currency: formats a number as a currency.
+
+### 4. What is a use case for a custom filter?
+To reverse a string 
+
+# 4-intro-to-controllers
+
+### What are modules? Why use them?
+
+They are a containern for different parts of your app - controllers, services, filters, directives, etc.
+You can specificy how you want your application to be bootstrapped. The delcaritive process is easier to understand. You can package code as reusable modules. THe code can be loaded in any order. Modules delay execution. Unit tests only have to load relevant modules, keeping them faster. End-to-end tests can use modules to override configuration.
+
+### What the hell is $scope?
+Scope is an object that refers to the app model. It is used for context in expressions.
+
+### Why do we pass in $scope as an argument to controller functions?
+Scope is an object within the controller, we can attach keys to the object like in regular JS to be rendered in the view.
+
+# 5-built-in-directives
+
+### Name 3 directives we have used so far.
+1. ng-app
+2. ng-model
+3. ng-controller
+
+### ng-hide
+Uses css display: none; to hide the element.
+
+### Why use ng-src and ng-href?
+So you can use expressions within the code, otherwise standard html prints the curly braces.
+
+### What are directives?
+They are markers on an html element that allow the Angular compliler to attach specific behaviors to that element and transform it and its children.
+
+### Does ng-class require an object to be passed in?
+No, it can be a string, array, or object, but they must be formatted accordingly.
+
+### What order does an ng-repeat display items in?
+It displays items in an indexed order ascending.
+
+### How does ng-repeat handle duplicate data?
+It cannot handle duplicate data without tracking by $index. 
+

@@ -1,0 +1,66 @@
+.ng-invalid.ng-dirty{
+	border:1px solid red;
+}
+
+.highlight {
+  color: orange;
+}
+
+.green {
+  color: green;
+}
+
+.red {
+  color: red;
+}
+.camera-list {
+	list-style-type: none;
+	padding-left: 0px;
+}
+
+.camera-shop {
+	margin-bottom: 0px;
+}
+
+.camera-thumbs {
+	width:100px;
+}
+
+.ping-container{
+}
+
+.ping{
+  float: left;
+  width: 250px;
+  height: 250px;
+  color: white;
+}
+
+.player-title{
+	text-align: center;
+}
+
+.left{
+  background-color: blue;
+}
+.right{
+  background-color: blue;
+}
+.winner{
+  background-color: green;
+}
+.loser{
+ background-color: red;
+}
+.score{
+    font-size: 60px;
+    margin-top: %50;
+    text-align: center;
+}
+.serve{
+	text-align: center;
+}
+
+.contact-container{
+	clear:both;
+}

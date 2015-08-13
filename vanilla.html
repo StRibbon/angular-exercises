@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<input type="text" placeholder="What is your name?" id="inputId">
+	<h1 id="nameBlock"></h1>
+	<script>
+      var i = document.getElementById("inputId");
+      i.addEventListener("keypress", function (){
+      	var nameShow = document.getElementById("nameBlock").innerHTML = i.value;
+      });
+      
+	</script>
+</body>
+</html>
